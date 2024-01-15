@@ -4,14 +4,19 @@
     <meta charset="UTF-8">
     <title>Кэт Энерджи</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicons/favicon-96x96.png">
+    <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="favicons/apple-icon-180x180.png">
+    <link rel="manifest" href="manifest.webmanifest">
     <link rel="stylesheet" href="styles/styles.css">
     <script src="scripts/index.js" defer></script>
   </head>
   <body class="page__body">
     <header class="main-header">
       <a class="main-header__logo logo" href="index.html">
-        <img class="logo__image logo__image--icon" src="#" width="202" height="58" alt="Кэт энерджи">
-        <img class="logo__image logo__image--text" src="#" width="202" height="58" alt="Кэт энерджи">
+        <img class="logo__image logo__image--icon" src="images/logo-image.svg" width="70" height="59" alt="Кэт энерджи">
+        <img class="logo__image logo__image--text" src="images/logo-text.svg" width="118" height="21" alt="Кэт энерджи">
       </a>
       <nav class="main-nav">
         <button class="main-nav__toggle button-burger" type="button">
@@ -42,7 +47,12 @@
       <section class="intro">
         <h2 class="intro__title">Функциональное питание для котов</h2>
         <p class="intro__slogan">Занялся собой? Займись котом!</p>
-        <a class="intro__link" href="#">Подбор программы</a>
+        <a class="intro__link" href="form.html">Подбор программы</a>
+        <picture>
+          <source width="552" height="499" type="image/png" media="(min-width: 1440px)" srcset="images/hero-image-desktop@1x.png 1x, images/hero-image-desktop@2x.png 2x">
+          <source width="709" height="609" type="image/png" media="(min-width: 768px)" srcset="images/hero-image-tablet@1x.png 1x, images/hero-image-tablet@2x.png 2x">
+          <img src="images/hero-image-mobile@1x.png" srcset="images/hero-image-mobile@2x.png 2x" width="280" height="270" alt="кэт энерджи курица 500г.">
+        </picture>
       </section>
 
       <section class="nutrition">
@@ -111,7 +121,11 @@
             <h2 class="visually-hidden">Контакты</h2>
             <p class="contacts__title">Приглашаем к сотрудничеству диллеров!</p>
             <p class="contacts__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
-            <img class="contacts__map" src="#" width="329" height="362" alt="Карта местоположение">
+            <picture>
+              <source width="1440" height="400" type="image/png" media="(min-width: 1440px)" srcset="images/hero-image-desktop@1x.png 1x, images/hero-image-desktop@2x.png 2x">
+              <source width="768" height="400" type="image/png" media="(min-width: 768px)" srcset="images/map-tablet@1x.png 1x, images/map-tablet@2x.png 2x">
+              <img src="images/map-mobile@1x.png" srcset="images/map-mobile@2x.png 2x" width="320" height="362" alt="Карта">
+            </picture>
           </div>
         </section>
         <a class="main-footer__logo" href="">
