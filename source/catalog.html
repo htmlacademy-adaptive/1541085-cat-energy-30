@@ -12,11 +12,19 @@
     <link rel="stylesheet" href="styles/styles.css">
     <script src="scripts/index.js" defer></script>
   </head>
-  <body class="page__body">
+  <body class="catalog__body">
     <header class="main-header">
       <a class="main-header__logo logo" href="index.html">
-        <img class="logo__image logo__image--icon" src="images/logo-image.svg" width="70" height="59" alt="Кэт энерджи">
-        <img class="logo__image logo__image--text" src="images/logo-text.svg" width="118" height="21" alt="Кэт энерджи">
+        <picture>
+          <source width="70" height="59" type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-image-desktop.svg">
+          <source width="60" height="50" type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo-image-tablet.svg">
+          <img class="logo__image logo__image--icon" src="images/logo-image-mobile.svg" width="33" height="38" alt="Кэт энерджи">
+        </picture>
+        <picture>
+          <source width="118" height="21" type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-text-desktop.svg">
+          <source width="101" height="18" type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo-text-tablet.svg">
+          <img class="logo__image logo__image--text" src="images/logo-text-mobile.svg" width="101" height="18" alt="Кэт энерджи">
+        </picture>
       </a>
       <nav class="main-nav">
         <button class="main-nav__toggle button-burger" type="button">
@@ -175,7 +183,7 @@
             <button class="button" type="button">Заказать</button>
           </li>
           <li class="products__item-more">
-            <h3 class="products__item-more__title">Показать еще 100500 товаров</h3>
+            <h3 class="products__item-more-title">Показать еще 100500 товаров</h3>
             <p class="products__text">На самом деле вкусов гораздо больше!</p>
             <a class="products__link" href="#s">Показать все</a>
           </li>
@@ -189,25 +197,25 @@
             <h3 class="catalog-extra__subtitle">Сахарозаменитель</h3>
             <span class="catalog-extra__text">1 упаковка (100г)</span>
             <b class="catalog-extra__price">200₽</b>
-            <button class="button">Заказать</button>
+            <button class="button" type="button">Заказать</button>
           </li>
           <li class="catalog-extra__item">
             <h3 class="catalog-extra__subtitle">Питьевая вода</h3>
             <span class="catalog-extra__text">5 литров</span>
             <b class="catalog-extra__price">50₽</b>
-            <button class="button">Заказать</button>
+            <button class="button" type="button">Заказать</button>
           </li>
           <li class="catalog-extra__item">
             <h3 class="catalog-extra__subtitle">Молоко</h3>
             <span class="catalog-extra__text">1 литр</span>
             <b class="catalog-extra__price">100₽</b>
-            <button class="button">Заказать</button>
+            <button class="button" type="button">Заказать</button>
           </li>
           <li class="catalog-extra__item">
             <h3 class="catalog-extra__subtitle">Витамины</h3>
             <span class="catalog-extra__text">1 упаковка (30г)</span>
             <b class="catalog-extra__price">300₽</b>
-            <button class="button">Заказать</button>
+            <button class="button" type="button">Заказать</button>
           </li>
         </ul>
       </section>
@@ -228,24 +236,28 @@
             </picture>
           </div>
         </section>
-        <a class="main-footer__logo" href="">
-          <img class="main-footer__logo-text" src="#" width="128" height="24" alt="Кэт энерджи">
+        <a class="main-footer__logo logo" href="index.html">
+          <picture>
+            <source width="128" height="24" type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-text-desktop.svg">
+            <source width="128" height="24" type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo-text-tablet.svg">
+            <img class="logo__image logo__image-text" src="images/logo-text-mobile.svg" width="128" height="24" alt="Кэт энерджи">
+          </picture>
         </a>
-        <section class="page-footer__socials socials">
+        <section class="main-footer__socials socials">
           <h2 class="visually-hidden">Социальные сети</h2>
           <ul class="socials__list">
-            <li class="socials__item">
-              <a class="socials__link socials__link--vk" href="#">
+            <li class="socials__item socials__item--vk">
+              <a class="socials__link" href="#">
                 <span class="visually-hidden">VK</span>
               </a>
             </li>
-            <li class="socials__item">
-              <a class="socials__link--youtube" href="#">
+            <li class="socials__item socials__item--youtube">
+              <a class="socials__link" href="#">
                 <span class="visually-hidden">Youtube</span>
               </a>
             </li>
-            <li class="socials__item">
-              <a class="socials__link--tg" href="#">
+            <li class="socials__item socials__item--tg">
+              <a class="socials__link" href="#">
                 <span class="visually-hidden">Telegram</span>
               </a>
             </li>
@@ -253,8 +265,8 @@
         </section>
 
         <a class="copyright" href="https://htmlacademy.ru/intensive/adaptive">
-          <span class="copyright__text">HTML Academy</span>
-          <img class="copyright__link" src="#" alt="HTML Academy логотип">
+          <img class="copyright__link-text" src="images/html-academy-logo-text-mobile.svg" width="113" height="20" alt="HTML Academy логотип">
+          <img class="copyright__link-image" src="images/html-academy-logo-image-mobile.svg" width="27" height="34" alt="HTML Academy логотип">
         </a>
 
       </div>

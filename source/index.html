@@ -15,8 +15,16 @@
   <body class="page__body">
     <header class="main-header">
       <a class="main-header__logo logo" href="index.html">
-        <img class="logo__image logo__image--icon" src="images/logo-image.svg" width="70" height="59" alt="Кэт энерджи">
-        <img class="logo__image logo__image--text" src="images/logo-text.svg" width="118" height="21" alt="Кэт энерджи">
+        <picture>
+          <source width="70" height="59" type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-image-desktop.svg">
+          <source width="60" height="50" type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo-image-tablet.svg">
+          <img class="logo__image logo__image--icon" src="images/logo-image-mobile.svg" width="33" height="38" alt="Кэт энерджи">
+        </picture>
+        <picture>
+          <source width="118" height="21" type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-text-desktop.svg">
+          <source width="101" height="18" type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo-text-tablet.svg">
+          <img class="logo__image logo__image--text" src="images/logo-text-mobile.svg" width="101" height="18" alt="Кэт энерджи">
+        </picture>
       </a>
       <nav class="main-nav">
         <button class="main-nav__toggle button-burger" type="button">
@@ -58,12 +66,12 @@
       <section class="nutrition">
         <div class="nutrition__wrapper">
           <ul class="nutrition__list">
-            <li class="nutrition__item--weight-loss">
+            <li class="nutrition__item nutrition__item--weight-loss">
               <h3 class="nutrition__title">Похудение</h3>
               <p class="nutrition__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
               <a class="nutrition__link" href="#">Каталог slim</a>
             </li>
-            <li class="nutrition__item--weight-gain">
+            <li class="nutrition__item nutrition__item--weight-gain">
               <h3 class="nutrition__title">Набор массы</h3>
               <p class="nutrition__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
               <a class="nutrition__link" href="#">Каталог pro</a>
@@ -108,7 +116,7 @@
           </dl>
           <p class="example__price">
             <span class="example__costs">Затраты на питание:</span>
-            <span class="example__"> 15 000 РУБ.</span>
+            <span class="example__">15 000 РУБ.</span>
           </p>
           <img class="example__image-cat" src="#" width="280" height="256" alt="Картинка кота до и после">
         </div>
@@ -128,35 +136,37 @@
             </picture>
           </div>
         </section>
-        <a class="main-footer__logo" href="">
-          <img class="main-footer__logo-text" src="#" width="128" height="24" alt="Кэт энерджи">
+        <a class="main-footer__logo logo" href="#">
+          <picture>
+            <source width="128" height="24" type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-text-desktop.svg">
+            <source width="128" height="24" type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo-text-tablet.svg">
+            <img class="logo__image logo__image-text" src="images/logo-text-mobile.svg" width="128" height="24" alt="Кэт энерджи">
+          </picture>
         </a>
-        <section class="page-footer__socials socials">
+        <section class="main-footer__socials socials">
           <h2 class="visually-hidden">Социальные сети</h2>
           <ul class="socials__list">
-            <li class="socials__item">
-              <a class="socials__link socials__link--vk" href="#">
+            <li class="socials__item socials__item--vk">
+              <a class="socials__link" href="#">
                 <span class="visually-hidden">VK</span>
               </a>
             </li>
-            <li class="socials__item">
-              <a class="socials__link--youtube" href="#">
+            <li class="socials__item socials__item--youtube">
+              <a class="socials__link" href="#">
                 <span class="visually-hidden">Youtube</span>
               </a>
             </li>
-            <li class="socials__item">
-              <a class="socials__link--tg" href="#">
+            <li class="socials__item socials__item--tg">
+              <a class="socials__link" href="#">
                 <span class="visually-hidden">Telegram</span>
               </a>
             </li>
           </ul>
         </section>
-
         <a class="copyright" href="https://htmlacademy.ru/intensive/adaptive">
-          <span class="copyright__text">HTML Academy</span>
-          <img class="copyright__link" src="#" alt="HTML Academy логотип">
+          <img class="copyright__link-text" src="images/html-academy-logo-text-mobile.svg" width="113" height="20" alt="HTML Academy логотип">
+          <img class="copyright__link-image" src="images/html-academy-logo-image-mobile.svg" width="27" height="34" alt="HTML Academy логотип">
         </a>
-
       </div>
     </footer>
   </body>
