@@ -1,0 +1,19 @@
+.catalog__title {
+  font-family: $secondary-font;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 36px;
+  line-height: 36px;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.catalog__text {
+  font-family: $primary-font;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+  background-color: $base-color-page;
+}

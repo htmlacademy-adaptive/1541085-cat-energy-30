@@ -1,0 +1,31 @@
+.example {
+  background-color: $secondary-color-page;
+}
+
+.example__title {
+  font-family: $secondary-font;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 36px;
+  line-height: 40px;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.example__subtitle {
+  font-family: $secondary-font;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 24px;
+  color: #000000;
+}
+
+.example__price {
+  font-family: $secondary-font;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 20px;
+  color: #ffffff;
+}
