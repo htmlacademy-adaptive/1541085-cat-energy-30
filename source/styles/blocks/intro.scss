@@ -1,0 +1,23 @@
+.intro {
+  background-color: $base-color-page;
+}
+
+.intro__title {
+  font-family: $secondary-font;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 36px;
+  line-height: 36px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.intro__slogan {
+  font-family: $secondary-font;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 14px;
+  color: #ffffff;
+  text-align: center;
+}

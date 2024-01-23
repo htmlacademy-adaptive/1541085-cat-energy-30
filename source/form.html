@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="form" lang="ru">
+<html class="page" lang="ru">
   <head>
     <meta charset="UTF-8">
     <title>Подбор программы</title>
@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="styles/styles.css">
     <script src="scripts/index.js" defer></script>
   </head>
-  <body class="form__body">
+  <body class="page__body">
     <header class="main-header">
       <a class="main-header__logo logo" href="index.html">
         <picture>
@@ -32,7 +32,7 @@
         </button>
         <ul class="main-nav__list site-list">
           <li class="site-list__item site-list__item--active">
-            <a class="site-list__link site-list__link--active" href="#" aria-current="page">
+            <a class="site-list__link site-list__link--active" href="index.html">
               Главная
             </a>
           </li>
@@ -41,18 +41,20 @@
               Каталог продукции
             </a>
           </li>
-          <li class="site-list__item site-list__item--active">
-            <a class="site-list__link" href="form.html">
+          <li class="site-list__item site-list__item--active" aria-current="page">
+            <a class="site-list__link" href="#">
               Подбор программы
             </a>
           </li>
         </ul>
       </nav>
     </header>
-    <main class="form-container">
+    <main class="main-container form">
       <h1 class="form__title">Подбор программы</h1>
+      <p class="form__subtitle">Заполните анкету, и мы подберем
+программу питания для вашего кота</p>
 
-        <form class="form-container__form" action="https://echo.htmlacademy.ru" method="post">
+        <form class="form__questionnaire" action="https://echo.htmlacademy.ru" method="post">
           <fieldset class="form__field">
             <legend class="visually-hidden">Информация о питомце</legend>
             <ul class="form__list">
@@ -103,7 +105,7 @@
             </ul>
           </fieldset>
           <fieldset class="form__field">
-            <legend class="form__title">Контактные данные (владельца кота)</legend>
+            <legend class="form__field-title">Контактные данные (владельца кота)</legend>
             <ul class="form__list">
               <li class="form__item">
                 <label class="form__name label">
@@ -120,7 +122,7 @@
             </ul>
           </fieldset>
           <fieldset class="form__field">
-            <legend class="form__title">Комментарий</legend>
+            <legend class="form__field-title">Комментарий</legend>
             <ul class="form__list">
               <li class="form__item">
                 <label class="form__name visually-hidden">Дополнительная информация о питомце</label>
@@ -129,7 +131,7 @@
             </ul>
           </fieldset>
           <fieldset class="form__field">
-            <legend class="form__title">Дополнительно</legend>
+            <legend class="form__field-title">Дополнительно</legend>
             <ul class="form__list">
               <li class="form__item">
                 <label class="form__name label">
