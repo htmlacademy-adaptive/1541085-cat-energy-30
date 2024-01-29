@@ -37,3 +37,43 @@
   color: #000000;
   background-color: #ffffff;
 }
+
+.form__name--e-mail {
+  position: relative;
+}
+
+.form__icon--e-mail {
+  display: inline-block;
+  position: absolute;
+  width: 17px;
+  height: 13px;
+  mask-image: url("../../images/icons/stack.svg#icon_e-mail");
+  background-color: #000000;
+  top: 8px;
+  right: 5px;
+}
+
+.form__name--e-mail:hover .form__icon--e-mail,
+.form__name--e-mail:focus .form__icon--e-mail {
+  background-color: $base-color-page;
+}
+
+.form__name--tel {
+  position: relative;
+}
+
+.form__icon--tel {
+  display: inline-block;
+  position: absolute;
+  width: 17px;
+  height: 13px;
+  mask-image: url("../../images/icons/stack.svg#icon_phone");
+  background-color: #000000;
+  top: 8px;
+  right: 5px;
+}
+
+.form__name--tel:hover .form__icon--tel,
+.form__name--tel:focus .form__icon--tel {
+  background-color: $base-color-page;
+}
