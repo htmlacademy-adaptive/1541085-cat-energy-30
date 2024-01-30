@@ -1,0 +1,13 @@
+.socials__list {
+  display: flex;
+  gap: 24px;
+}
+
+.socials__link:hover .socials__icon,
+.socials__link:focus .socials__icon {
+  fill: $base-color-page;
+}
+
+.socials__link:active .socials__icon {
+  opacity: 0.6;
+}
