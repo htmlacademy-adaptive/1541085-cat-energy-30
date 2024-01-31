@@ -1,7 +1,8 @@
 .copyright {
   display: flex;
-  background-color: #ffffff;
-  gap: auto;
+  background-color: $third-color-page;
+  padding-top: 26px;
+  padding-left: 20px;
 }
 
 .copyright__link--text {
@@ -11,6 +12,7 @@
   font-size: 16px;
   line-height: 20px;
   color: $base-color-text;
+  margin-right: 140px;
 }
 
 .copyright:hover .copyright__link--image,
@@ -21,4 +23,8 @@
 .copyright:active .copyright__link--image,
 .copyright:active .copyright__link--text {
   opacity: 0.6;
+}
+
+.copyright__link--image-wrapper {
+  padding-top: 9px;
 }

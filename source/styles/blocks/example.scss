@@ -1,5 +1,12 @@
 .example {
-  background-color: $secondary-color-page;
+  background-color: $third-color-page;
+  margin-bottom: 28px;
+}
+
+.example__wrapper {
+  padding-top: 26px;
+  padding-left: 20px;
+  padding-bottom: 38px;
 }
 
 .example__title {
@@ -9,7 +16,14 @@
   font-size: 36px;
   line-height: 40px;
   color: #000000;
-  background-color: #ffffff;
+  margin: 0;
+  margin-bottom: 40px;
+}
+
+.example__description {
+  font-family: $primary-font;
+  font-size: 14px;
+  line-height: 18px;
 }
 
 .example__subtitle {
@@ -28,4 +42,9 @@
   font-size: 14px;
   line-height: 20px;
   color: #000000;
+  margin-left: 1px;
+}
+
+.example__expenses {
+  text-transform: uppercase;
 }
