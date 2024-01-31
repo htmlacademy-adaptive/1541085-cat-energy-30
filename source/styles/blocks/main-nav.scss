@@ -44,10 +44,8 @@
 }
 
 .main-nav--closed .main-nav__toggle:active::before {
-  background-color: opacify(#000000, 0.3);
-  box-shadow:
-    0 8px 0 0 opacify(#000000, 0.3),
-    0 16px 0 0 opacify(#000000, 0.3);
+  background-color: (#000000, 0.3);
+  box-shadow: 0 8px 0 0 (#000000, 0.3), 0 16px 0 0 (#000000, 0.3);
 }
 
 .main-nav--opened .main-nav__toggle {
@@ -77,6 +75,6 @@
 
   &:active::before,
   &:active::after {
-    background-color: opacify(#000000, 0.3);
+    background-color: (#000000, 0.3);
   }
 }
