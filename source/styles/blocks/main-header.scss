@@ -1,3 +1,18 @@
+.main-header {
+  width: 320px;
+  text-align: center;
+  flex-direction: column;
+}
+
+.main-header__logo {
+  margin-top: 13px;
+  margin-bottom: 10px;
+  margin-right: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .main-header__logo:hover,
 .main-header__logo:focus {
   opacity: 0.8;

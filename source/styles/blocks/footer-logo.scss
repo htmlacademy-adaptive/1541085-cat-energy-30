@@ -1,3 +1,11 @@
+.footer-logo {
+  display: block;
+  padding-top: 40px;
+  padding-left: 96px;
+  padding-bottom: 40px;
+  background-color: $third-color-page;
+}
+
 .footer-logo:hover,
 .footer-logo:focus {
   opacity: 0.8;

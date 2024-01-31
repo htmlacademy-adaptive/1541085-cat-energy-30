@@ -1,6 +1,14 @@
+.socials {
+  background-color: $third-color-page;
+}
+
 .socials__list {
   display: flex;
   gap: 24px;
+  margin: 0;
+  margin-top: -3px;
+  margin-left: 94px;
+  padding: 0;
 }
 
 .socials__link:hover .socials__icon,

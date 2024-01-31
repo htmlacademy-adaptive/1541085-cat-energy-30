@@ -1,5 +1,12 @@
 .intro {
   background-color: $base-color-page;
+  width: auto;
+  height: 276px;
+  padding-top: 27px;
+  padding-left: 18px;
+  margin-bottom: 197px;
+  display: flex;
+  flex-direction: column;
 }
 
 .intro__title {
@@ -10,6 +17,8 @@
   line-height: 36px;
   color: #ffffff;
   text-align: center;
+  margin: 0;
+  margin-bottom: 11px;
 }
 
 .intro__slogan {
@@ -20,4 +29,20 @@
   line-height: 14px;
   color: #ffffff;
   text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 29px;
+  margin-left: -5px;
+}
+
+.intro__link {
+  order: 2;
+}
+
+.intro__link.button {
+  padding: 9px;
+  text-transform: uppercase;
+}
+
+.intro__image {
+  margin-left: 2px;
 }
