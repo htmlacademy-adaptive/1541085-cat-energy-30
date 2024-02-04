@@ -1,0 +1,46 @@
+.program {
+  overflow-x: hidden;
+}
+
+.program__wrapper {
+  padding: 25px 20px 32px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    padding: 29px 70px 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 38px 110px 79px;
+  }
+}
+
+.program__title {
+  margin: 0 0 35px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 54px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 0 55px;
+  }
+}
+
+.program__description {
+  color: $base-color;
+  font-family: $secondary-font;
+  text-transform: uppercase;
+  margin: 0 0 39px;
+
+  @media (min-width: $tablet-width) {
+    width: 324px;
+    font-size: 20px;
+    line-height: 30px;
+    margin: 0 0 64px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 0 66px;
+  }
+}

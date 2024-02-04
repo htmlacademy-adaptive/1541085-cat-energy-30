@@ -1,0 +1,225 @@
+.nutrition-list {
+  order: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: $tablet-width) {
+    gap: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    margin: -150px 0 0;
+  }
+}
+
+.nutrition-list__item {
+  position: relative;
+  background-color: $secondary-color-text;
+  padding: 30px 24px 18px 20px;
+  list-style: none;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 24px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: $base-color-page;
+
+    @media (min-width: $tablet-width) {
+      top: 92px;
+      left: auto;
+      right: 63px;
+      width: 200px;
+      height: 200px;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 47px;
+      left: 52px;
+      right: auto;
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 77px 316px 57px 52px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 77px 61px 55px 52px;
+  }
+}
+
+.nutrition-list__item--weight-loss::after {
+  top: 21px;
+  left: 27px;
+  width: 36px;
+  height: 50px;
+  background-image: url("../../images/icons/stack.svg#cat-slim");
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @media (min-width: $tablet-width) {
+    top: 81px;
+    left: auto;
+    right: 93px;
+    width: 140px;
+    height: 194px;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 41px;
+    left: 67px;
+    right: auto;
+    width: 70px;
+    height: 97px;
+  }
+}
+
+.nutrition-list__item--weight-gain::after {
+  top: 35px;
+  left: 10px;
+  width: 72px;
+  height: 28px;
+  background-image: url("../../images/icons/stack.svg#cat-pro");
+  background-position: center;
+
+  @media (min-width: $tablet-width) {
+    top: 135px;
+    left: auto;
+    right: 22px;
+    width: 276px;
+    height: 112px;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 67px;
+    left: 27px;
+    right: auto;
+    width: 148px;
+    height: 56px;
+  }
+}
+
+.nutrition-list__title {
+  font-family: $secondary-font;
+  color: $base-color;
+  font-size: 24px;
+  line-height: 37px;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin: 0 29px 29px 70px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+    margin: 0 0 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 0 73px 162px;
+  }
+}
+
+.nutrition-list__description {
+  position: relative;
+  margin: 0 0 41px 0;
+
+  &::before {
+    position: absolute;
+    content: "";
+    bottom: -23px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #d9d9d9;
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    color: $base-color;
+    margin: 0 0 52px 0;
+    font-size: 16px;
+  }
+
+  @media (min-width: $desktop-width) {
+    color: $base-color;
+    margin: 0 0 27px 0;
+    font-size: 16px;
+  }
+}
+
+.nutrition-list__button {
+  position: relative;
+  font-family: $secondary-font;
+  color: $base-color;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 4px 50px 4px 0;
+  transition: all 0.1s ease;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 32px;
+    height: 10px;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background-image: url("../../images/icons/stack.svg#icon-arrow");
+    background-repeat: no-repeat;
+    background-position: -8px;
+    transition: all 0.1s ease;
+  }
+
+  &:hover::before {
+    background-position: 0;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: normal;
+    padding: 4px 58px 4px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 20px;
+  }
+}
+
+.nutrition-list__button--disabled {
+  opacity: 0.2;
+  cursor: default;
+
+  &::before {
+    background-position: 0;
+  }
+
+  &:active {
+    opacity: 0.2;
+  }
+}

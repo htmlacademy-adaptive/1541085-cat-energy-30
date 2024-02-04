@@ -1,0 +1,25 @@
+.textarea {
+  resize: none;
+  width: 100%;
+  min-height: 150px;
+  color: $base-color-text;
+  font-family: $secondary-font;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  padding: 14px 14px 14px 15px;
+  border: 1px solid #e7e7e7;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+    font-size: 20px;
+    line-height: 30px;
+    min-height: 175px;
+    padding: 11px 14px 14px 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+    padding: 9px 20px;
+  }
+}

@@ -1,3 +1,21 @@
 .page {
-  width: auto;
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+.page__body {
+  display: flex;
+  flex-direction: column;
+  font-family: $primary-font;
+  font-size: 14px;
+  line-height: 18px;
+  color: $base-color-text;
+  background-color: $secondary-color;
+  margin: 0 auto;
+  height: 100%;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }

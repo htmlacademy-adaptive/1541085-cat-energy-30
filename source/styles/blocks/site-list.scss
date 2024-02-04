@@ -1,20 +1,121 @@
 .site-list {
-  position: absolute;
-  width: 320px;
-  margin: 0;
   padding: 0;
-  background-color: #ffffff;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 34px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 610px;
+  }
+}
+
+.site-list__item {
+  position: relative;
+  list-style: none;
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: -5%;
+    width: 100vw;
+    height: 1px;
+    background-color: #e6e6e6;
+
+    @media (min-width: $tablet-width) {
+      width: 0;
+    }
+  }
+
+  &::after {
+    bottom: 0;
+  }
+}
+
+.site-list__item--current {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 50px;
+    width: 100%;
+    height: 2px;
+    background-color: $base-color-page;
+
+    @media (max-width: 767px) {
+      display: none;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 54px;
+    }
+  }
+}
+
+.site-list__item--index.site-list__item--current::before {
+  @media (min-width: $desktop-width) {
+    background-color: $secondary-color;
+  }
 }
 
 .site-list__link {
-  font-family: $secondary-font;
+  @include flex;
+  min-height: 66px;
+  width: 100%;
   font-size: 20px;
   line-height: 20px;
-  display: block;
-  position: relative;
-  padding-top: 22px;
-  padding-bottom: 24px;
-  border-top: 1px solid #e6e6e6;
-  color: #000000;
+  color: inherit;
+  text-decoration: none;
   text-transform: uppercase;
+  transition: all 0.1s ease;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 20px;
+    line-height: normal;
+  }
+}
+
+.site-list__link--disabled {
+  opacity: 0.2;
+  cursor: default;
+
+  &:hover,
+  &:active,
+  &:focus {
+    opacity: 0.2;
+    cursor: default;
+    outline: none;
+  }
+}
+
+.site-list__item--current .site-list__link {
+  &:hover,
+  &:active {
+    opacity: 1;
+  }
+}
+
+.site-list__item--index .site-list__link {
+  @media (min-width: $desktop-width) {
+    color: $secondary-color;
+  }
 }

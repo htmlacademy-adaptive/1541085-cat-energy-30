@@ -1,50 +1,220 @@
 .example {
-  background-color: $third-color-page;
-  margin-bottom: 28px;
+  background: $third-color-page;
+
+  @media (min-width: $tablet-width) {
+    background: linear-gradient($secondary-color 57%, $third-color-page 57% 100%);
+  }
+
+  @media (min-width: $desktop-width) {
+    background: linear-gradient($secondary-color 31%, $third-color-page 31% 100%);
+  }
 }
 
 .example__wrapper {
-  padding-top: 26px;
-  padding-left: 20px;
-  padding-bottom: 38px;
+  padding: 23px 20px 40px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    padding: 45px 30px 95px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 69px 110px 75px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 100px;
+  }
 }
 
-.example__title {
-  font-family: $secondary-font;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 36px;
-  line-height: 40px;
-  color: #000000;
-  margin: 0;
-  margin-bottom: 40px;
+.example .example__title {
+  margin: 0 0 40px 0;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 60px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 0 146px 0;
+  }
+}
+
+.example__content-wrapper {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 83px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1/2;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: start;
+    margin-bottom: 0;
+  }
 }
 
 .example__description {
-  font-family: $primary-font;
-  font-size: 14px;
-  line-height: 18px;
+  margin: 0 0 20px 0;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 55px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1/2;
+    width: 433px;
+    margin: 0 0 69px 0;
+  }
 }
 
-.example__subtitle {
-  font-family: $secondary-font;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 24px;
-  line-height: 24px;
-  color: #000000;
-}
-
-.example__price {
-  font-family: $secondary-font;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 14px;
-  line-height: 20px;
-  color: #000000;
-  margin-left: 1px;
+.example__list {
+  margin: 0;
 }
 
 .example__expenses {
+  color: $base-color;
+  text-align: center;
+  font-family: $secondary-font;
+  line-height: 20px;
   text-transform: uppercase;
+  margin: 0 0 20px 0;
+
+  @media (min-width: $tablet-width) {
+    text-align: right;
+    font-size: 20px;
+    line-height: 20px;
+    margin: -2px 0 20px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    gap: 66px;
+    margin: 0;
+  }
+}
+
+.example__slider {
+  margin: 0 0 0 3px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 auto;
+  }
+}
+
+.example__button-wrapper {
+  position: absolute;
+  left: 50%;
+  z-index: 7;
+  top: 50%;
+
+  &::after {
+    position: absolute;
+    content: "";
+    height: 256px;
+    width: 4px;
+    background-color: #666666;
+    transform: translate(-50%, -50%);
+    transition: all 0.1s ease;
+
+    @media (min-width: $tablet-width) {
+      height: 512px;
+    }
+  }
+
+  &:has(.example__button:hover)::after {
+    background-color: $base-color-page;
+  }
+
+  &:has(.example__button:active)::after {
+    background-color: $base-color-page;
+    opacity: 0.6;
+  }
+
+  &:has(.example__button--disabled)::after {
+    background-color: #666666;
+    opacity: 0.2;
+  }
+
+  &:has(.example__button--disabled:hover)::after {
+    background-color: #666666;
+  }
+
+  &:has(.example__button--disabled:active)::after {
+    background-color: #666666;
+    opacity: 0.2;
+  }
+}
+
+.example__button {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid #666666;
+  background-color: $secondary-color;
+  border-radius: 50%;
+  cursor: e-resize;
+  z-index: 5;
+  transition: all 0.1s ease;
+
+  &:hover {
+    border: 2px solid $base-color-page;
+  }
+
+  &:active {
+    border: 2px solid $base-color-page;
+    opacity: 0.6;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 24px;
+    height: 18px;
+    mask-image: url("../../images/icons/stack.svg#slider-arrows");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-color: #666666;
+    z-index: 4;
+    transition: all 0.1s ease;
+  }
+
+  &:hover::before {
+    background-color: $base-color-page;
+  }
+}
+
+.example__button--disabled {
+  opacity: 0.2;
+  cursor: default;
+
+  &:hover,
+  &:active {
+    border: 2px solid #666666;
+    opacity: 0.2;
+  }
+
+  &:hover::before,
+  &:active::before {
+    background-color: #666666;
+    opacity: 0.2;
+  }
+}
+
+.example__expenses-span {
+  @media (min-width: $tablet-width) {
+    display: block;
+    margin-top: 9px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 0;
+  }
 }

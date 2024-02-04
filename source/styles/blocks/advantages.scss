@@ -1,82 +1,26 @@
-.advantages {
-  background-color: #ffffff;
-  margin-bottom: 28px;
-}
+.advantages__wrapper {
+  padding: 0 20px 49px;
+  margin: 0 auto;
 
-.advantages__title {
-  font-family: $secondary-font;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 36px;
-  line-height: 40px;
-  color: #000000;
-  background-color: #ffffff;
-  margin: 0;
-  margin-left: 20px;
-  margin-bottom: 40px;
-  padding: 0;
+  @media (min-width: $tablet-width) {
+    padding: 0 30px 47px;
+    border-bottom: 1px solid #e6e6e6;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 75px 110px 0;
+    border: none;
+  }
 }
 
 .advantages__list {
-  display: flex;
-  flex-wrap: wrap;
-  padding-left: 20px;
-}
-
-.advantages__item {
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 20px;
-}
-
-.advantages__image-wrapper--leaf {
-  display: block;
-  width: 60px;
-  height: 60px;
-  background-image: url("../../images/icons/stack.svg#icon_leaf");
-  background-size: 30px 32px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: $base-color-page;
-}
-
-.advantages__image-wrapper--powder {
-  display: block;
-  width: 60px;
-  height: 60px;
-  background-image: url("../../images/icons/stack.svg#icon_powder");
-  background-size: 30px 32px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: $base-color-page;
-}
-
-.advantages__image-wrapper--meal {
-  display: block;
-  width: 60px;
-  height: 60px;
-  background-image: url("../../images/icons/stack.svg#icon_meal");
-  background-size: 30px 32px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: $base-color-page;
-}
-
-.advantages__image-wrapper--clock {
-  display: block;
-  width: 60px;
-  height: 60px;
-  background-image: url("../../images/icons/stack.svg#icon_clock");
-  background-size: 30px 32px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: $base-color-page;
-}
-
-.advantages__description {
-  width: 200px;
-  display: inline-block;
-  margin: 0;
-  margin-left: 20px;
   padding: 0;
+}
+
+.advantages__title {
+  margin: 0 0 42px 0;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 32px 0;
+  }
 }

@@ -1,0 +1,47 @@
+.map {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -80%);
+    width: 57px;
+    height: 53px;
+    background-color: transparent;
+    background-image: url("../../images/map-icon-mobile@1x.png");
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @media (min-width: $tablet-width) {
+      background-image: url("../../images/map-icon-tablet@1x.png");
+      width: 113px;
+      height: 106px;
+      transform: translate(-45%, -55%);
+    }
+
+    @media (min-width: $desktop-width) {
+      left: 66.5%;
+      transform: translate(-45%, -65%);
+    }
+  }
+}
+
+.map iframe {
+  border: none;
+  display: block;
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    height: 400px;
+  }
+}
+
+.map__image-reserve {
+  display: none;
+}
+
+.map__image-reserve--nojs.map__image-reserve {
+  display: block;
+}
