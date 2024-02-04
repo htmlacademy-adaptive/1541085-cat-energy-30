@@ -1,3 +1,13 @@
-.main-footer {
-  width: auto;
+.main-footer__wrapper {
+  @media (min-width: $desktop-width) {
+    position: relative;
+  }
+}
+
+.main-footer__address {
+  margin: 0 auto;
+}
+
+.main-footer__map {
+  margin: 0 auto;
 }

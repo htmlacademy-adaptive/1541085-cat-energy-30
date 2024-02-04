@@ -1,3 +1,55 @@
 .label {
-  background-color: #ffffff;
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 15px;
+  max-width: 100%;
+  color: $base-color-text;
+  font-family: $secondary-font;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+
+  &:hover .label__mark {
+    outline: 1px solid #bababa;
+  }
+
+  &:has(input:focus-visible) {
+    outline: 2px solid #444444;
+    outline-offset: 2px;
+  }
+
+  &:active .label__mark {
+    opacity: 0.6;
+  }
+
+  @media (min-width: $tablet-width) {
+    gap: 20px;
+    font-size: 20px;
+    line-height: normal;
+  }
+}
+
+.label__mark {
+  position: relative;
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+  outline: 1px solid #cdcdcd;
+  transition: all 0.1s ease;
+
+  @media (min-width: $tablet-width) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.label__span {
+  color: #222222;
+}
+
+.label__span--checkbox {
+  color: $base-color;
 }

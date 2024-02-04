@@ -1,11 +1,50 @@
 .button {
+  @include flex;
   font-family: $secondary-font;
-  font-weight: 400;
-  font-style: normal;
+  color: $secondary-color;
+  background-color: $base-color-page;
   font-size: 16px;
   line-height: 20px;
-  background-color: $base-color-page;
-  color: #ffffff;
-  text-align: center;
+  padding: 10px;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-decoration: none;
   border: none;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    background-color: #5eaa2f;
+    color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+.button--secondary {
+  background-color: $secondary-color-text;
+  color: $base-color-text;
+
+  &:hover {
+    background-color: #ebebeb;
+  }
+
+  &:active {
+    color: $base-color-text;
+    background-color: #ebebeb;
+  }
+}
+
+.button--disabled {
+  opacity: 0.2;
+  cursor: default;
+
+  &:hover,
+  &:active,
+  &:focus {
+    opacity: 0.2;
+    cursor: default;
+    outline: none;
+  }
 }
